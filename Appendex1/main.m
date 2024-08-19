@@ -12,10 +12,10 @@ for index = 1 : 6
     addpath(genpath('D:\Work\Research\Project-002'));
     
     % Setting some variables
-    CECsDim = cell([{"fix"}, [10, 30, 50, 100], [10, 30, 50, 100], {"fix"}, [10, 20], [10, 20]]);
+    CECsDim = cell([{"fix"}, [30, 100], [30, 100], {"fix"}, [10, 20], [10, 20]]);
     populationNo = 30;
-    maxRun = 10;
-    maxItr = 100;
+    maxRun = 30;
+    maxItr = 500;
 
     % if index ~= 1
     % if index ~= 2
