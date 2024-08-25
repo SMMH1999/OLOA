@@ -70,18 +70,6 @@ function Comparetor3(CEC_Index, populationNo, maxRun, maxItr, CECsDim)
     end
 end
 
-function [algorithmsName, algorithms] = Get_algorithm(algorithmFileAddress)
-    % Reading the names of algorithms from the file
-    % algorithmsName = readlines("D:\Work\Research\Project-002\Appendex1\AlgorithmsName.txt");
-    algorithmsName = readlines(algorithmFileAddress);
-
-    % Converting the algorithm names from string to function
-    algorithms = cell(size(algorithmsName, 1), 1);
-    for i = 1 : size(algorithmsName, 1)
-        algorithms{i} = str2func(algorithmsName(i));
-    end
-end
-
 function [] = Conclusion(benchmarkResults, maxItr, maxRun, algorithmFileAddress, nFunction, cecName, dim)
     cecNames = ["2005","2014","2017","2019","2020","2022"];
 
@@ -142,10 +130,10 @@ function [] = Conclusion(benchmarkResults, maxItr, maxRun, algorithmFileAddress,
     mkdir(strcat('D:\Work\Research\Project-002\Results\CEC', cecNames(cecName)));
 
     % Saving Conclusions results in file
-    writecell(tableConclusion, filename, 'Sheet', 'Conclusions');
+    writecell(tableConclusion, filename, 'Sheet', 'Conclusions','Range','B2');
 
     % Saving T-test results in file
-    writematrix(pValue, filename, 'Sheet', 'P-Value');
+    writematrix(pValue, filename, 'Sheet', 'P-Value','Range','C3');
     writematrix(hValue, filename, 'Sheet', 'null Hypothesis');
 
     clear [tableConclusion, algorithmsName, algorithms, cecNames, filename]

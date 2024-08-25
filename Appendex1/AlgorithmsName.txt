@@ -4,3 +4,4 @@ PSO
 GA
 GSA
 WOA
+SSA

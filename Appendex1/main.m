@@ -27,7 +27,7 @@ for index = 1 : 6
     % if index ~= 1 && index ~= 6
     % if index ~= 4 && index ~= 5
     % if index ~= 5 && index ~= 6
-    if index ~= 1 && index ~= 3 && index ~= 5 && index ~= 6
+    if index ~= 1 && index ~= 3 && index ~= 6
     % 
         continue;
     end
